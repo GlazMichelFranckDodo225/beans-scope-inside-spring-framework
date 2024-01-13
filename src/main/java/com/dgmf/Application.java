@@ -14,22 +14,11 @@ public class Application {
 		var context =
 				new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-		// Retrieving Bean from Spring Context
-		VehicleServices vehicleServices1 = context.getBean(VehicleServices.class);
-		VehicleServices vehicleServices2 = context.getBean(
-				"vehicleServices",
-				VehicleServices.class
-		);
-
-		// Outputs
-		System.out.println("Hashcode of the Bean vehicleServices1 : " +
-				vehicleServices1.hashCode());
-		System.out.println("Hashcode of the Bean vehicleServices2 : " +
-				vehicleServices2.hashCode());
-
-		if(vehicleServices1 == vehicleServices2) {
-			System.out.println("VehicleServices Bean is a Singleton Scope Bean");
-		}
+		System.out.println("Before Retrieving the Person Bean from " +
+				"the Spring Context");
+		Person person = context.getBean(Person.class);
+		System.out.println("After Retrieving the Person Bean from " +
+				"the Spring Context");
 	}
 
 }

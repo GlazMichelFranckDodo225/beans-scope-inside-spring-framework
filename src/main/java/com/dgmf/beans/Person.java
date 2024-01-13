@@ -10,6 +10,8 @@ public class Person {
 
     @Autowired
     public Person(Vehicle vehicle) {
+        System.out.println("Person Bean Eagerly Created by Spring ...");
+
         this.vehicle = vehicle;
     }
 
