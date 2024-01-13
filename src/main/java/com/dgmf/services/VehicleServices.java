@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 // Default Spring Bean Scope ==> Can be Omitted
-@Scope(BeanDefinition.SCOPE_SINGLETON)
+// @Scope(BeanDefinition.SCOPE_SINGLETON)
+@Scope(BeanDefinition.SCOPE_PROTOTYPE)
 public class VehicleServices {
     @Autowired
     private Speakers speakers;

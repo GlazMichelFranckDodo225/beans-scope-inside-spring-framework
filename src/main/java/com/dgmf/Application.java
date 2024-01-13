@@ -29,6 +29,9 @@ public class Application {
 
 		if(vehicleServices1 == vehicleServices2) {
 			System.out.println("VehicleServices Bean is a Singleton Scope Bean");
+		} else {
+			System.out.println("VehicleServices Bean is a Prototype Scope Bean");
+
 		}
 	}
 
