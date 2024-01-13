@@ -1,16 +1,18 @@
 package com.dgmf.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component(value = "personBean")
+@Lazy
 public class Person {
     private String name = "Lucy";
     private final Vehicle vehicle;
 
     @Autowired
     public Person(Vehicle vehicle) {
-        System.out.println("Person Bean Eagerly Created by Spring ...");
+        System.out.println("Person Bean Lazily Created by Spring ...");
 
         this.vehicle = vehicle;
     }
